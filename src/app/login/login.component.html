@@ -1,0 +1,30 @@
+<div class = "ui-login ui-dark-theme">
+    <div class = "ui-login-container">
+        <div class = "ui-login-header">
+            <div class = "ui-system-logo">
+                <img src = "../../assets/images/logo.png">
+            </div>
+            <div class = "ui-system-name">
+                {{ appComponent.systemName }}
+            </div>
+        </div>
+        <div class = "ui-login-body">
+            <div class = "ui-login-avatar">
+                <span class = "fa fa-user-circle ui-login-user-icon"></span>
+            </div>
+            <div class = "ui-login-form">
+                <form [formGroup] = "signInForm" class="ui-form">
+                    <mat-form-field class = "ui-login-field">
+                        <input matInput placeholder="Nome do usuário" formControlName="login" autofocus required>
+                    </mat-form-field>
+                    <mat-form-field class = "ui-login-field">
+                        <input matInput type = "password" placeholder="Senha" formControlName="password" required>
+                    </mat-form-field>
+                    <button mat-button class = "ui-btn-login" (click) = "doLogin()">
+                        Entrar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

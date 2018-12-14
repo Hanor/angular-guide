@@ -1,0 +1,26 @@
+@import "../app.component.scss";
+
+.ui-home-header {
+    background: $ui-primary-color;
+    color: $ui-dark-normal-color;
+    height: 70px;
+}
+
+.ui-home-header span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ui-home-message {
+    float: left;
+    width: 100%;
+    height: calc(100% - 150px);
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.ui-home-message span {
+    margin: auto;
+}

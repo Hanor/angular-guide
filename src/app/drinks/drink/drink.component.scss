@@ -1,0 +1,27 @@
+@import '../drinks.component.scss';
+
+.ui-drink-item {
+    float: left;
+    width: 100%;
+    min-height: 60px;
+    padding: 10px;
+    
+    box-shadow: 0px 0px 8px 1px $ui-border-color;
+    border: 1px solid 1px $ui-border-color;
+}
+.ui-drink-information {
+    float: left;
+    width: 20%;
+    height: auto;
+    word-wrap: break-word;
+    line-height: 30px;
+}
+.ui-drink-quantity, .ui-drink-name {
+    width: 100%;
+}
+.ui-drink-name {
+    font-size: 14px;
+}
+.ui-drink-quantity {
+    padding-top: 5px;
+}

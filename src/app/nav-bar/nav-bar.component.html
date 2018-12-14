@@ -1,0 +1,46 @@
+<div [ngClass] = "{ 'ui-nav-bar-system': true,'ui-nav-bar-system-retract': appComponent.retracted }">
+  <button mat-button class = "ui-btn-nav-bar-user-menu" [matMenuTriggerFor]="userMenu">
+    <span class = "fa fa-user-circle ui-nav-bar-option-user"></span>
+  </button>
+  <div *ngIf = "!appComponent.retracted" class = "ui-nav-bar-system-logo"
+    mat-button>
+    <img src = "../../assets/images/logo.png">
+  </div>
+  <div *ngIf = "appComponent.retracted" class = "ui-nav-bar-system-logo ui-nav-bar-system-logo-retract" [matTooltip] = "appComponent.systemName" matTooltipPosition="right">
+    <img src = "../../assets/images/logo.png">
+  </div>
+  <div *ngIf = "!appComponent.retracted" class = "ui-nav-bar-system-name">
+    {{ appComponent.systemName }}
+  </div>
+</div>
+<div class = "ui-nav-bar-divisor"></div>
+<div [ngClass] = "{ 'ui-nav-bar-options': true,'ui-nav-bar-options-retract': appComponent.retracted }">
+  <button *ngFor = "let state of states"
+  mat-button [matTooltipDisabled] = "!appComponent.retracted" [matTooltip] = "state.alias" matTooltipPosition="right"
+  (click) = "this.router.navigate([state.name])"
+  [ngClass] = "{ 
+    'ui-nav-bar-option': true,
+    'ui-nav-bar-option-retract': appComponent.retracted,
+    'ui-nav-bar-option-active': currentState$.getValue() === state
+  }">
+    <span [class] = "state.icon + ' ui-option-icon'"></span>
+    <span *ngIf = "!appComponent.retracted" class = "ui-option-name">{{state.alias}}</span>
+  </button>
+</div>
+<div class = "ui-nav-bar-retract-option">
+    <button mat-button [matTooltip]="(appComponent.retracted) ? 'Expandir': 'Recolher'" matTooltipPosition="right"
+    class = "ui-btn-nav-bar-retract" (click) = "doRetract()">
+      <span [ngClass] = "{
+        'fas': true,
+        'fa-arrow-left': !appComponent.retracted,
+        'fa-arrow-right': appComponent.retracted
+      }"></span>
+    </button>
+</div>
+
+<mat-menu #userMenu="matMenu">
+  <button mat-menu-item (click) = "doLogout()">
+    <span class = "fa fa-power-off"></span>
+    <span style = "margin-left:10px">Logout</span>
+  </button>
+</mat-menu>

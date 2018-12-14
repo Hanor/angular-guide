@@ -1,0 +1,6 @@
+<mat-paginator [length] = "paginator.size"
+    [pageSize] = "paginator.offset"
+    [pageSizeOptions] = "offsetOptions"
+    [pageIndex] = "paginator.page - 1"
+    (page) = "eventPageChange($event)">
+</mat-paginator>

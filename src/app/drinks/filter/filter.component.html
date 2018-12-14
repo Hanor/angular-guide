@@ -1,0 +1,31 @@
+<div class = "ui-filter-title">
+    Filtrar
+</div>
+<form [formGroup] = "filter" class = "ui-filter-form">
+    <mat-form-field class = "ui-filter-field">
+        <input matInput type = "text" placeholder="Nome da bebida" formControlName="name">
+    </mat-form-field>
+    <mat-form-field class = "ui-filter-field">
+        <input matInput type = "text" placeholder="Tipo da bebida" formControlName="type">
+    </mat-form-field>
+    <mat-form-field class = "ui-filter-field">
+        <input matInput type = "text" placeholder="Fabricante" formControlName="manufacturer">
+    </mat-form-field>
+    <mat-form-field class = "ui-filter-field">
+        <input matInput type = "text" placeholder="Páis de origem" formControlName="country">
+    </mat-form-field>
+    <mat-form-field class = "ui-filter-field">
+        <input matInput type = "text" placeholder="Acima de" formControlName="moreThan">
+    </mat-form-field>
+    <mat-form-field class = "ui-filter-field">
+        <input matInput type = "money" placeholder="Menor que" formControlName="lessThan">
+    </mat-form-field>
+</form>
+<div class = "ui-filter-options">
+    <button class = "ui-filter-btn ui-filter-close-btn" matTooltip = "Cancelar" matTooltipPosition="right" (click) = "eventClose(false)">
+        <span class = "fas fa-times"></span>
+    </button>
+    <button class = "ui-filter-btn ui-filter-complete-btn" matTooltip = "Filtrar" matTooltipPosition="right" (click) = "eventClose(true)">
+        <span class = "fa fa-check"></span>
+    </button>
+</div>

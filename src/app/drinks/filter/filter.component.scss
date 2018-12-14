@@ -1,0 +1,86 @@
+@import '../drinks.component.scss';
+
+.ui-filter-title {
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+    color: $ui-normal-color;
+}
+
+.ui-filter-options, .ui-filter-form {
+    padding: 10px;
+    padding-bottom: 5px;
+}
+.ui-filter-field {
+    padding: 5px;
+    height: 50px;
+}
+
+.ui-filter-options {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+@media(min-width: 961px) {
+    .ui-filter-options, .ui-filter-form {
+        width: 500px;
+        margin-left:calc(100% - 500px);
+        max-width: 500px;
+    }
+    
+    .ui-filter-field {
+        width: 50%;
+    }
+}
+@media(min-width: 501px) {
+    .ui-filter-options, .ui-filter-form {
+        margin-left: 0px;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .ui-filter-field {
+        width: 50%;
+    }
+}
+
+@media(max-width: 500px) {
+    .ui-filter-field {
+        width: 100%;
+    }
+    .ui-filter-options, .ui-filter-form {
+        margin-left: 0px;
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+.ui-filter-btn {
+    padding: 0px;
+    margin: auto;
+    width:40px;
+    height: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    line-height: 40px;
+    border-radius: 15px;
+    color: $ui-normal-color;
+    font-size: 20px;
+    outline: none;
+    box-shadow: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.ui-filter-close-btn:hover {
+    color: $ui-error-color;
+    background: none;
+}
+
+.ui-filter-complete-btn:hover {
+    color: $ui-success-color;
+    background: none;
+}

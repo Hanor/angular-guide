@@ -1,0 +1,60 @@
+<div class = "ui-container-header ui-drink-header">
+  <span class = "fas fa-wine-glass-alt"></span>
+  <span style = "margin-left:10px;"> Bebidas </span>
+</div>
+<div class = "ui-container-body">
+  <div class = "ui-filter ui-dark-theme">
+    <div class = "ui-filter-quantity" *ngIf = "paginator">
+      Encontrados: {{paginator.size}}
+    </div>
+    <div class = "ui-filter-current">
+      <b>Filtro:</b> {{(!filterAsString) ? 'Nenhum filtro aplicado' : filterAsString}}
+    </div>
+    <button class = "ui-filter-btn ui-removal-btn" 
+    *ngIf = "filterAsString && filterAsString !== ''" matTooltip = "Remover filtro" matTooltipPosition="right"
+     mat-button (click) = "eventCleanFilter()">
+      <span class = "fa fa-trash"></span>
+    </button>
+    <button class = "ui-filter-btn ui-addition-btn" 
+    [matTooltip] = "(!filterAsString || filterAsString === '') ? 'Filtrar' : 'Editar filtros'"
+    matTooltipPosition="right" mat-button (click) = "eventFilter($event)">
+      <span class = "fas fa-filter"></span>
+    </button>
+  </div>
+
+  <!-- Perceba que para drink no array, iremos inserir o componente drink. Este componente possui: html, scss e ts, 
+todos os arquivos/dependências deste componente serão renderizado/carregados -->
+  <div [ngClass] = "{'ui-drinks': true}">
+    <div *ngIf = "drinks?.length > 0">
+      <div class = "ui-drink-item-header">
+        <div class = "ui-drink-information">
+          Nome & quantidade
+        </div>
+        <div class = "ui-drink-information">
+          Tipo de bebida
+        </div>
+        <div class = "ui-drink-information">
+          Preço R$
+        </div>
+        <div class = "ui-drink-information">
+          País de origem
+        </div>
+        <div class = "ui-drink-information">
+          Fabricante
+        </div>
+      </div>
+      <div class = "ui-drink" *ngFor = "let drink of drinks">
+        <ui-drink [drink] = "drink"></ui-drink>
+      </div>
+      <div class = "ui-paginator">
+        <ui-paginator [paginator] = "paginator" [offsetOptions]= "offsetOptions" (change) = "eventPageChange($event)"></ui-paginator>
+      </div>
+    </div> 
+    <div *ngIf = "drinks?.length === 0" class = "ui-drink-empty">
+      <div class = "ui-drink-empty-message">
+        {{(!filterAsString) ? 'Não há itens cadastrados.' : 'Nenhum item encontrado com este filtro :('}}
+        <b *ngIf = 'filterAsString' style = "font-size: 16px;"><br>{{filterAsString}}</b>
+      </div>
+    </div>
+  </div>
+</div>

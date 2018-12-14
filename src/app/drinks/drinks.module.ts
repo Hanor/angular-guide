@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BeersComponent } from './beers/beers.component';
+import { DrinksComponent } from './drinks.component';
+import { DrinkComponent } from './drink/drink.component';
+import { AppMaterialModule } from '../app-material.module';
+import { FilterComponent } from './filter/filter.component';
+import { PaginatorComponent } from '../paginator/paginator.component';
 
 @NgModule({
-  declarations: [BeersComponent],
+  declarations: [DrinksComponent, DrinkComponent, FilterComponent, PaginatorComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    AppMaterialModule,
+  ],
+  exports: [DrinksComponent, DrinkComponent, FilterComponent],
+  entryComponents: [FilterComponent]
 })
 export class DrinksModule { }

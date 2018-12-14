@@ -1,0 +1,90 @@
+@import "../styles.scss";
+
+.ui-nav-bar {
+    float: left;
+    height: 100%;
+    width: 250px;
+    background: $ui-second-color;
+    position: fixed;
+    z-index: 3;
+}
+.ui-nav-bar-retract {
+    float: left;
+    height: 100%;
+    width: 60px;
+    background: $ui-second-color;
+    position: fixed;
+    z-index: 3;
+}
+.ui-container {
+    float: left;
+    height: 100%;
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    z-index: 1;
+}
+.ui-container-retract {
+    float: left;
+    height: 100%;
+    width: calc(100% - 60px);
+    margin-left: 60px;
+    z-index: 1;
+}
+.ui-container-full {
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+.ui-container-header {
+    float: left;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    padding-left: 40px;
+    background: $ui-primary-color;
+    color: $ui-dark-normal-color;
+    z-index: 2;
+}
+.ui-container-body {
+    float: left;
+    padding-top: 60px;
+    width: 100%;
+    z-index: 1;
+}
+.ui-container-header > span {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.ui-right {
+    float: right;
+}
+
+.ui-option-name {
+    float: left;
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 40px;
+    color: $ui-dark-normal-color;
+}
+.ui-option-icon {
+    float: left;
+    font-size: 16px;
+    line-height: 40px;
+    color: $ui-dark-normal-color;
+    margin-left: 15px;
+}
+
+/*
+*
+*   Estilização de botões para aplicação
+*
+*/
+.ui-removal-btn:hover {
+    background: $ui-error-color !important;
+}
+.ui-addition-btn:hover {
+    background: $ui-success-color !important;
+}

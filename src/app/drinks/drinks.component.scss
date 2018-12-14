@@ -1,0 +1,113 @@
+@import '../app.component.scss';
+
+.ui-drink-header {
+    background: $ui-primary-color;
+    color: $ui-dark-normal-color;
+    height: 50px;
+}
+
+.ui-drink-header span {
+    font-size: 20px;
+    font-weight: bold;
+}
+.ui-container-body {
+    float: left;
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    padding-top: 45px;
+    color: $ui-normal-color;
+}
+.ui-filter {
+    float: right;
+    height: auto;
+    width: 100%;
+    min-height: 30px;
+    background: $ui-primary-color;
+    color: $ui-dark-normal-color;
+    padding-left: 40px;
+    padding-bottom: 5px;
+    font-size: 12px;
+}
+.ui-filter-quantity {
+    float: left;
+    width: 90px;
+    min-height: 30px;
+    text-align: left;
+    font-size: 12px;
+    padding-top: 13px;
+}
+.ui-filter-current {
+    float: left;
+    min-height: 30px;
+    max-width: calc(100% - 220px);
+    padding-left: 20px;
+    padding-top: 15px;
+    word-wrap: break-word;
+    font-size: 10px;
+    padding-right: 10px;
+}
+.ui-filter-btn {
+    float: left;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 5px;
+    min-width: 30px;
+    max-width: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    border-radius: 15px;
+    margin-left: 5px;
+    padding-top: 2px !important;
+    padding-left: 9px !important;
+    line-height: 12px;
+    font-size: 12px;
+    text-align: left;
+}
+.ui-drinks {
+    float: left;
+    width: 100%;
+    padding: 40px;
+}
+.ui-drink-item-header {
+    float: left;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    word-wrap: break-word;
+
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.ui-drink-information {
+    float: left;
+    width: 20%;
+    word-wrap: break-word;
+    padding: 5px;
+    height: auto;
+    word-wrap: break-word;
+}
+.ui-drink {
+    float: left;
+    min-height: 20px;
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+.ui-paginator {
+    float: left;
+    width: 100%;
+}
+.ui-drink-empty {
+    margin: auto;
+    width: 250px;
+    padding-top: calc(50vh - 100px);
+    text-align: center;
+    height: auto;
+}
+.ui-drink-empty-message {
+    width: 100%;
+    word-wrap: break-word;
+}

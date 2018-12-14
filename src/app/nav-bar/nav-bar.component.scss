@@ -1,0 +1,120 @@
+@import "../app.component.scss";
+
+.ui-nav-bar-system {
+    float: left;
+    width: 100%;
+    height: 110px;
+    padding: 10px;
+    padding-top: 5px;
+}
+.ui-nav-bar-system-retract {
+    height: 80px;
+}
+
+.ui-nav-bar-options {
+    float: left;
+    height: calc(100% - 165px);
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+}
+.ui-nav-bar-options-retract {
+    height: calc(100% - 135px);
+}
+
+.ui-nav-bar-divisor {
+    float: left;
+    width: 90%;
+    border-bottom: 1px solid $ui-border-color;
+    margin-left: 5%;
+}
+
+.ui-nav-bar-system-logo {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+}
+
+.ui-nav-bar-system-logo img {
+    margin: auto;
+    width: 200px;
+    height: 70px;
+}
+
+.ui-nav-bar-system-logo-retract {
+    height: 60px;
+}
+
+.ui-nav-bar-system-logo-retract img {
+    width: 60px;
+    height: 20px;
+    margin-left: -10px;
+}
+
+.ui-nav-bar-system-name {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    height: 35px;
+    color: $ui-dark-normal-color;
+    font-size: 14px;
+}
+
+.ui-nav-bar-retract-option {
+    float: left;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+.ui-btn-nav-bar-user-menu {
+    float: right;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    display: block;
+    min-width: 40px !important;
+    padding: 0px !important;
+    max-width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 25px;
+}
+.ui-nav-bar-option-user {
+    font-size: 26px;
+    color: $ui-dark-normal-color;
+}
+.ui-nav-bar-option {
+    border-radius: 0px;
+    width: 100%;
+    border-left: 4px solid rgba(0,0,0, 0);
+}
+.ui-nav-bar-option-retract {
+    min-width: 60px !important;
+    text-align: center !important;
+    padding: 0px;
+}
+.ui-nav-bar-option-active {
+    /*
+    *   Teste de estilo
+    *   box-shadow: inset -1px 0px 40px 5px $ui-active-shadow-color;
+    *   background: $ui-primary-color;
+    */
+    background: $ui-active-shadow-color;
+    border-left: 4px solid $ui-primary-color;
+}
+
+.ui-btn-nav-bar-retract {
+    float: right;
+    display: block;
+    min-width: 40px !important;
+    padding: 0px !important;
+    max-width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 14px;
+    color: $ui-dark-normal-color;
+}
