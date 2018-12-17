@@ -10,7 +10,6 @@ import { UserModel } from './user/user.model';
 })
 export class AppComponent implements OnInit, AfterViewInit{
   retracted: boolean = false;
-  loaded: boolean = false;
   systemName: string = 'Angular Project Example';
   user: UserModel;
 
@@ -30,7 +29,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   }
   ngAfterViewInit(): void {
     setTimeout(() => {
-      this.loaded = true;
+      document.getElementById('loading-panel').remove();
     }, 4000);
   }
   interfaceAdjust(width: number) {
