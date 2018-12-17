@@ -5,7 +5,7 @@
     font-weight: bold;
     font-size: 14px;
     text-align: left;
-    color: $ui-normal-color;
+    color: $ui-gray-color;
 }
 
 .ui-filter-options, .ui-filter-form {
@@ -67,7 +67,7 @@
     max-height: 40px;
     line-height: 40px;
     border-radius: 15px;
-    color: $ui-normal-color;
+    color: $ui-gray-color;
     font-size: 20px;
     outline: none;
     box-shadow: none;
@@ -76,11 +76,11 @@
     cursor: pointer;
 }
 .ui-filter-close-btn:hover {
-    color: $ui-error-color;
+    color: $ui-red-color;
     background: none;
 }
 
 .ui-filter-complete-btn:hover {
-    color: $ui-success-color;
+    color: $ui-green-color;
     background: none;
 }

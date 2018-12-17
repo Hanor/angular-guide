@@ -2,7 +2,7 @@
 
 .ui-drink-header {
     background: $ui-primary-color;
-    color: $ui-dark-normal-color;
+    color: $ui-white-color;
     height: 50px;
 }
 
@@ -16,7 +16,7 @@
     height: auto;
     font-size: 12px;
     padding-top: 45px;
-    color: $ui-normal-color;
+    color: $ui-gray-color;
 }
 .ui-filter {
     float: right;
@@ -24,7 +24,7 @@
     width: 100%;
     min-height: 30px;
     background: $ui-primary-color;
-    color: $ui-dark-normal-color;
+    color: $ui-white-color;
     padding-left: 40px;
     padding-bottom: 5px;
     font-size: 12px;

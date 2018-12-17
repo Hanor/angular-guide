@@ -6,10 +6,11 @@ $ui-second-color: map-get(map-get($ui-colors, 'light-gray'), 500);
 
 $ui-border-color: map-get(map-get($ui-colors, 'light-gray'), 50);
 $ui-shadow-color: map-get(map-get($ui-colors, 'light-gray'), 500);
-$ui-active-shadow-color: map-get(map-get($ui-colors, 'light-gray'), 600);
+$ui-active-shadow-color: map-get(map-get($ui-colors, 'light-gray'), 400);
 
-$ui-dark-normal-color: map-get(map-get($ui-colors, 'light-blue'), A200);
+$ui-white-color: map-get(map-get($ui-colors, 'light-blue'), A200);
 
-$ui-error-color:  map-get(map-get($ui-colors, 'light-red'), 300);
-$ui-normal-color: map-get(map-get($ui-colors, 'light-gray'), 300);
-$ui-success-color: map-get(map-get($ui-colors, 'light-green'), 300);
+$ui-red-color:  map-get(map-get($ui-colors, 'light-red'), 300);
+$ui-gray-color: map-get(map-get($ui-colors, 'light-gray'), 300);
+$ui-green-color: map-get(map-get($ui-colors, 'light-green'), 300);
+$ui-purple-color: map-get(map-get($ui-colors, 'light-purple'), 300);

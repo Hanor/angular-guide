@@ -1,6 +1,14 @@
-<div [hidden] = "!user" [ngClass] = "{'ui-dark-theme': true, 'ui-nav-bar': !retracted, 'ui-nav-bar-retract': retracted}">
+<div [hidden] = "!user" [ngClass] = "{
+  'ui-dark-theme': true, 
+  'ui-nav-bar': !retracted, 
+  'ui-nav-bar-retract': retracted
+}">
   <nav-bar></nav-bar>
 </div>
-<div [ngClass] =  "{'ui-container': user && !retracted, 'ui-container-retract': user && retracted, 'ui-container-full': !user}">
+<div [ngClass] =  "{
+  'ui-container': user && !retracted, 
+  'ui-container-retract': user && retracted, 
+  'ui-container-full': !user
+}">
   <router-outlet></router-outlet>
 </div>

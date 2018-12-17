@@ -1,8 +1,8 @@
 @import "../app.component.scss";
 
 .ui-error-header {
-    background: $ui-error-color;
-    color: $ui-dark-normal-color;
+    background: $ui-red-color;
+    color: $ui-white-color;
     height: 70px;
 }
 
@@ -20,7 +20,7 @@
     display: flex;
     align-content: center;
     align-items: center;
-    color: $ui-error-color;
+    color: $ui-red-color;
 }
 .ui-error-message span {
     margin: auto;

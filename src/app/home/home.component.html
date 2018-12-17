@@ -2,6 +2,26 @@
   <span class = "fa fa-home"></span>
   <span style = "margin-left:10px;"> Bem vindo </span>
 </div>
-<div class = "ui-home-message">
-  <span>Seja feliz =)</span>
+<div class = "ui-home-container">
+  <div class = "ui-home-items">
+    <div class = "ui-home-item"
+    (click)="this.router.navigate(['/drinks'], {queryParams: {page:1, size:7, offset: 5}})">
+      <div class = "ui-item-logo">
+        <span class="fas fa-wine-glass-alt"></span>
+      </div>
+      <div class = "ui-item-label">
+        Gerenciar bebidas
+      </div>
+    </div>
+    <div class = "ui-home-item ui-item-angular"
+    (click) = "eventAngularStyleGuide()">
+      <div class = "ui-item-logo">
+        <span class="fab fa-angular"></span>
+      </div>
+      <div class = "ui-item-label">
+        Angular StyleGuide
+        <br><b style="font-size:4px;">Sorte que não é PHP!</b>
+      </div>
+    </div>
+  </div>
 </div>
