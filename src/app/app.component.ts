@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener} from '@angular/core';
+import { Component, OnInit, HostListener, AfterViewInit} from '@angular/core';
 import { SystemService } from './system/system.service';
 import { UserService } from './user/user.service';
 import { UserModel } from './user/user.model';
@@ -8,11 +8,11 @@ import { UserModel } from './user/user.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit, AfterViewInit{
   retracted: boolean = false;
+  loaded: boolean = false;
   systemName: string = 'Angular Project Example';
   user: UserModel;
-  
 
   constructor(
     private systemService: SystemService,
@@ -27,6 +27,11 @@ export class AppComponent implements OnInit{
     
     this.interfaceAdjust(window.innerWidth);
     this.eventUserChange();
+  }
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.loaded = true;
+    }, 4000);
   }
   interfaceAdjust(width: number) {
     if (!this.retracted && width < 670) {

@@ -1,0 +1,54 @@
+@import 'theme.scss';
+
+.ui-loading-panel {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10000;
+    background: $ui-second-color;
+    width: 100%;
+    height: 100%;
+}
+.ui-loading {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.ui-logo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    animation: dash 1s infinite linear normal both;
+}
+.ui-logo img {
+    margin-top: 60px;
+    margin-left: 15px;
+    width: 170px;
+    height: 80px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes dash  {
+  0% {
+    box-shadow: 0px 5px 15px 1px $ui-green-color;
+  }
+  25% {
+    box-shadow: 5px 0px 15px 1px $ui-blue-color;
+  }
+  50% {
+    box-shadow: 0px -5px 15px 1px $ui-purple-color;
+  }
+  75% {
+      box-shadow: -5px 0px 15px 1px $ui-red-color;
+  }
+  100% {
+      box-shadow: 0px 5px 15px 1px $ui-green-color;
+  }
+}
