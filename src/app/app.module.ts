@@ -29,8 +29,7 @@ import { ErrorInterceptor } from './api/http-interceptor.service';
     BrowserAnimationsModule,
     HttpClientModule,
     AppMaterialModule
-  ], 
-  exports: [AppMaterialModule],
+  ],
   providers: [
     /**
      * Toda a vez que um http for chamado, será injetado no header do http do jwt token oriundo da chamada.

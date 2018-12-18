@@ -30,7 +30,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   ngAfterViewInit(): void {
     setTimeout(() => {
       document.getElementById('loading-panel').remove();
-    }, 4000);
+    }, 2000);
   }
   interfaceAdjust(width: number) {
     if (!this.retracted && width < 670) {
